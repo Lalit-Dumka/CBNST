@@ -22,6 +22,7 @@ void print_table(vector<vector<int>>&v, int n){
     }
 }
 
+// Newton's forward interpolation formula;
 float forwardInterpolation(vector<vector<int>>&v, int n, int x){
     int sum = v[0][1];
     float u = (float)(x - v[0][0]) / (v[1][0] - v[0][0]);
@@ -36,6 +37,7 @@ float forwardInterpolation(vector<vector<int>>&v, int n, int x){
     return sum;
 }
 
+// Newton's backward interpolation formula
 float backwardInterpolation(vector<vector<int>>&v, int n, int x){
     int sum = v[n-1][1];
     float u = (float)(x - v[n-1][0]) / (v[1][0] - v[0][0]);
